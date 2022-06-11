@@ -1,1 +1,47 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+// body {
+//     font-size: 14px;
+//     line-height: 1.142;
+//     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+//     font-weight: 400;
+//     letter-spacing: 0.03em;
+//     color: var(--main-text-color);
+// }
+
+.container {
+    // mobile
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    // tablet - аналог: @media screen and (min-width: 768px)
+    @include media(tablet){
+        width: 768px;
+        padding: 0 40px;
+    }
+
+    // desktop - агалог: @media screen and (min-width: 1440px)
+    @include media(desktop){
+        width: 1366;
+        padding: 0 25px;
+    }
+}
+
+.hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.section {
+    padding: 130px 0;
+}
+

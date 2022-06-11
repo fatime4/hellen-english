@@ -1,9 +1,9 @@
-@import './base/common';
-@import './utils/fonts';
 @import './utils/variables';
-@import './utils/placeholders';
-@import './utils/mixins';
 @import './base/reset-styles';
+@import './utils/fonts';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './base/common';
 @import './components/body';
 @import './components/header';
 @import './components/hero';
