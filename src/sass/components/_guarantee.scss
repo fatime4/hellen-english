@@ -1,0 +1,38 @@
+.container {
+  padding: 0;
+}
+
+.guarantee__title {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primaryTitleBackgroundColor;
+}
+
+.guarantee__container {
+  padding: 45px 20px;
+  background-color: $secondaryBackgroundColor;
+}
+
+.guarantee__item {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.67;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+    border-left: 1px dashed $primaryTextColor;
+  }
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 15px;
+    height: 20px;
+    margin-right: 20px;
+    background-image: url(../images/campfire.svg);
+  }
+}
