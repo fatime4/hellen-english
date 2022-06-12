@@ -1,11 +1,18 @@
-// Our program
+// Our program mobile
 
 .program {
   background-color: $primaryTitleBackgroundColor;
-  text-align: center;
-
   padding-top: 50px;
   padding-bottom: 70px;
+
+  @include media(mobile-only) {
+    text-align: center;
+  }
+
+  @include media(tablet) {
+    padding-top: 60px;
+    padding-bottom: 137px;
+  }
 }
 
 .program__h2-title {
@@ -16,6 +23,10 @@
   color: $whiteColor;
 
   margin-bottom: 30px;
+
+  @include media(tablet) {
+    margin-bottom: 52px;
+  }
 }
 
 .program__h3-title {
@@ -57,3 +68,5 @@
   letter-spacing: 0.08em;
   opacity: 0.5;
 }
+
+// Tablet
