@@ -1,31 +1,50 @@
 <header class="header">
   <div class="container">
-    <a href="#" class="logo">
-      Hell<svg width="22" height="30"><use href="#"></use></svg>EN
-      <p><span>hellish</span>english</p>
+    <a href="#" class="logo" id="logo">
+      <p class="logo__name">Hell<svg width="22" height="30">
+        <use href="./images/sprite.svg#icon-campfire"></use></svg>EN</p>
+      <p class="logo__text"><span class="accent-text">hellish&nbsp;</span>english</p>
     </a>
-    <nav>
-      <ul class="nuv">
-        <li class="nuv__item">
-          <a class="nuv__link" href="#">Studying program</a>
+    <nav class="navigation" id="navigation" data-menu>
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__link" id="program" href="#">Studying program</a>
         </li>
-        <li class="nuv__item">
-          <a class="nuv__link" href="#">about</a>
+        <li class="nav__item">
+          <a class="nav__link" id="about" href="#">About</a>
         </li>
-        <li class="nuv__item">
-          <a class="nuv__link" href="#">training options</a>
+        <li class="nav__item">
+          <a class="nav__link" id="training" href="#">Training options</a>
         </li>
-        <li class="nuv__item">
-          <a class="nuv__link" href="#">contacts</a>
+        <li class="nav__item">
+          <a class="nav__link" id="contacts" href="#">Contacts</a>
         </li>
       </ul>
+
+      <a href="#xxx" class="consultation" id="consultation">consultation by phone</a>
     </nav>
-    <a href="#" class="consultation">consultation by phone</a>
+
+    <button class="mabil-menu__btn" id="mabil-menu__btn" data-menu-button>
+      <svg
+        width="25"
+        height="25"
+        aria-label="Переключатель мобильного окна"
+      >
+      <use
+          class="icon-menu-open"
+          href="./images/sprite.svg#icon-menu-open"
+        ></use>
+        <use
+          class="icon-menu-close"
+          href="./images/sprite.svg#icon-menu-close"
+        ></use>
+        
+      </svg>
+    </button>
   </div>
 </header>
 
-<main>
-  <!-- hero -->
+<!--   
   <section class="hero">
     <div class="container">
       <div class="hero__name">
@@ -38,10 +57,10 @@
         <img src="#" alt="people sit at the table" />
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Advantages -->
-  <section class="section Advantages">
+  <!-- <section class="section Advantages">
     <div class="container">
       <h2 class="hidden">Our advantages</h2>
       <ul class="advantages__list">
@@ -50,5 +69,57 @@
         <li class="dvantages__item">Financial guarantee the result</li>
       </ul>
     </div>
-  </section>
-</main>
+  </section> -->
+
+<script>
+  (() => {
+  const menuBtnRef = document.querySelector("[data-menu-button]");
+  const mobileMenuRef = document.querySelector("[data-menu]");
+
+  menuBtnRef.addEventListener("click", () => {
+    const expanded =
+      menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+    menuBtnRef.classList.toggle("is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+    mobileMenuRef.classList.toggle("is-open");
+  });
+})();
+
+
+  document.getElementById('mabil-menu__btn').onclick = function() {
+  document.getElementById('logo').classList.toggle('logo-dark');
+}
+
+document.getElementById('consultation').onclick = function() {
+document.getElementById('navigation').classList.remove('is-open'), 
+document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+document.getElementById('logo').classList.remove('logo-dark');
+}
+
+document.getElementById('program').onclick = function() {
+document.getElementById('navigation').classList.remove('is-open'), 
+document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+document.getElementById('logo').classList.remove('logo-dark');
+}
+
+document.getElementById('about').onclick = function() {
+document.getElementById('navigation').classList.remove('is-open'), 
+document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+document.getElementById('logo').classList.remove('logo-dark');
+}
+
+document.getElementById('training').onclick = function() {
+document.getElementById('navigation').classList.remove('is-open'), 
+document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+document.getElementById('logo').classList.remove('logo-dark');
+}
+
+document.getElementById('contacts').onclick = function() {
+document.getElementById('navigation').classList.remove('is-open'), 
+document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+document.getElementById('logo').classList.remove('logo-dark');
+}
+
+</script>
