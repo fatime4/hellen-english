@@ -1,0 +1,36 @@
+.problems {
+    /* position: relative; */
+    background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
+}
+.problems-title {
+font-weight: 800;
+font-size: 24px;
+line-height: 1.3;
+/* or 31px */
+letter-spacing: 0.03em;
+
+    color: #ffffff;
+}
+.accent-text {
+    color: #FF6B09;
+}
+.problem-list {
+    /* position: absolute; */
+
+    counter-reset: section; 
+
+    background-color: #ffffff;
+}
+.problem__text::before {
+    counter-increment: section;  
+    content: "— 0" counter(section);
+    display: block;
+}
+.problem__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+    
+    color: #111518;
+}
