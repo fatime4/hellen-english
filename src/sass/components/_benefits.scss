@@ -1,0 +1,44 @@
+// Benefits
+
+.benefits__list {
+  counter-reset: section; /*Создаёт новый счётчик для каждого
+                                      тега <ol>*/
+  list-style-type: none;
+}
+
+.benefits__item::before {
+  counter-increment: section; /*Инкрементируется только счётчик
+                                     текущего уровня вложенности*/
+  content: counters(section, '.') ' '; /*Добавляем значения всех уровней
+                                    вложенности, используя разделитель '.'*/
+  /*Если необходима поддержка < IE8,
+                                      необходимо убедиться, что после
+                                      разделителя ('.') не стоит пробел*/
+}
+
+.benefits {
+  padding: 35px 22px;
+}
+
+.benefits__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  color: grey;
+
+  width: 180px;
+  margin-bottom: 28px;
+}
+
+.benefits__item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+  color: $primaryTitleBackgroundColor;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

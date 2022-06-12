@@ -1,0 +1,59 @@
+// Our program
+
+.program {
+  background-color: $primaryTitleBackgroundColor;
+  text-align: center;
+
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.program__h2-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: $whiteColor;
+
+  margin-bottom: 30px;
+}
+
+.program__h3-title {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.08em;
+  color: $whiteColor;
+
+  margin-bottom: 5px;
+}
+
+.program__h4-title {
+  font-size: 12px;
+  line-height: 1.65;
+  letter-spacing: 0.08em;
+  color: $accentColor;
+
+  margin-bottom: 5px;
+}
+
+.program__h4-title--secondary {
+  margin-bottom: 10px;
+}
+
+.program__list {
+  border-left: 3px solid red;
+  margin-bottom: 40px;
+}
+
+.program__list--secondary {
+  margin-bottom: 8px;
+}
+
+.program__item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
