@@ -3,7 +3,9 @@
 }
 
 .guarantee--form {
-  padding: 0;
+  @include media(mobile-only) {
+    padding: 0;
+  }
 }
 
 .guarantee__title {
@@ -19,6 +21,11 @@
 .guarantee__container {
   padding: 45px 20px;
   background-color: $secondaryBackgroundColor;
+
+  @include media(tablet) {
+    max-width: 688px;
+    padding: 30px 64px;
+  }
 }
 
 .guarantee__item {
@@ -26,18 +33,23 @@
   font-size: 12px;
   line-height: 1.67;
   padding-left: 35px;
+  color: $primaryTitleBackgroundColor;
 
   &:not(:last-child) {
     margin-bottom: 25px;
 
+    @include media(tablet) {
+      margin-bottom: 20px;
+    }
+
     &::after {
       content: '';
       position: absolute;
-      top: 68%;
+      top: 32px;
       left: 7px;
       display: block;
       border-left: 1px dashed $primaryTextColor;
-      height: calc(100% - 5px);
+      height: calc(100% - 12px);
       width: 1px;
     }
   }
