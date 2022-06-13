@@ -8,13 +8,13 @@
     margin: 0 auto;
 
     // tablet - аналог: @media screen and (min-width: 768px)
-    @include media(tablet){
+    @include media(tablet) {
         width: 768px;
         padding: 0 40px;
     }
 
     // desktop - агалог: @media screen and (min-width: 1440px)
-    @include media(desktop){
+    @include media(desktop) {
         width: 1366;
         padding: 0 25px;
     }
@@ -36,4 +36,3 @@
 .section {
     padding: 130px 0;
 }
-
