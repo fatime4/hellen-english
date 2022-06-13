@@ -1,16 +1,15 @@
 // Our program mobile
 
 .program {
-  // background-color: $primaryTitleBackgroundColor;
-  background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
   padding-top: 50px;
-  // padding-bottom: 70px;
 
   @include media(mobile-only) {
+    background-image: linear-gradient(to bottom, #111518 86%, #ffffff 14%);
     text-align: center;
   }
 
   @include media(tablet) {
+    background-image: linear-gradient(to bottom, #111518 75%, #ffffff 15%);
     padding-top: 60px;
     padding-bottom: 137px;
   }
@@ -40,12 +39,21 @@
 }
 
 .program__h4-title {
+  position: relative;
   font-size: 12px;
   line-height: 1.65;
   letter-spacing: 0.08em;
   color: $accentColor;
 
   margin-bottom: 5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: $accentColor;
+  }
 }
 
 .program__h4-title--secondary {
@@ -54,7 +62,14 @@
 
 .program__list {
   border-left: 3px solid red;
-  margin-bottom: 40px;
+
+  @include media(mobile) {
+    margin-bottom: 40px;
+  }
+
+  @include media(tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .program__list--secondary {
@@ -71,3 +86,25 @@
 }
 
 // Tablet
+
+.program__box {
+  @include media(tablet) {
+    display: flex;
+    flex-direction: column;
+
+    width: 150px;
+  }
+}
+
+.program__item-flex {
+  @include media(tablet) {
+    display: flex;
+  }
+}
+
+.program__box--vocabulary,
+.program__box--writing {
+  @include media(tablet) {
+    margin-left: 50px;
+  }
+}
