@@ -1,0 +1,44 @@
+.problems {
+    padding: 25px 20px 0;
+    background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
+}
+.problems-title {
+margin-bottom: 25px;
+
+font-weight: 800;
+font-size: 24px;
+line-height: 1.3;
+/* or 31px */
+letter-spacing: 0.03em;
+
+    color: #ffffff;
+}
+.accent-text {
+    color: #FF6B09;
+}
+.problem-list {
+    padding: 20px 27px;
+
+    counter-reset: section; 
+
+    background-color: #ffffff;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+.problem__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+.problem__text::before {
+    counter-increment: section;  
+    content: "— 0" counter(section);
+    display: block;
+    color: #FF6B09;
+    margin-bottom: 5px;
+}
+.problem__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+    
+    color: #111518;
+}
