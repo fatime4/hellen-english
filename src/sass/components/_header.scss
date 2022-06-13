@@ -1,6 +1,12 @@
 .header .container {
     position: relative;
     z-index: 1;
+
+    @include media(tablet){
+        display: flex;
+        justify-content: start;
+        align-items: baseline;
+    }
 }
 
 .header {
@@ -14,7 +20,7 @@
 .logo {
     display: inline-block;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.23;
     letter-spacing: 0.04em;
     z-index: 1;
@@ -40,10 +46,16 @@
         @include media(tablet){
             font-size: 8px;
         }
+
+    
     }
 
     @include media(tablet){
         font-size: 26px;
+    }
+
+    @include media(desktop){
+        margin-right: 165px;
     }
 }
 
@@ -54,6 +66,8 @@
 
 // navigation
 
+
+
 .navigation {
     display: none;
     flex-direction: column;
@@ -63,9 +77,37 @@
     height: 100vh;
     top: 0;
     left: 0;
-    padding: 120px 20px;
+    padding: 120px 0;
     background: rgba(17, 21, 24, 0.9);;
     z-index: -1;
+
+    @include media(desktop){
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+}
+
+.nav {
+    padding: 0 20px;
+    @include media(mobile){
+        width: 480px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    @include media(desktop){
+        width: auto;
+        padding: 0;
+    }
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 64px;
 }
 
 .nav__link {
@@ -79,6 +121,15 @@
     &:hover,
     &:focus {
         color: $accentColor;
+    }
+
+    @include media(desktop){
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.21;
+        text-transform: uppercase;
+
+        color: #B9B9B9;
     }
 }
 
@@ -128,7 +179,7 @@
 
 .consultation {
     display: block;
-    max-width: 260px;
+    width: 260px;
     padding: 14px 0;
     margin-top: 50px;
     margin-left: auto;
@@ -145,11 +196,19 @@
     background-color: transparent;
     border: 2px solid $accentColor;
 
-    // @include media(tablet){
-    //     position: absolute;
-    //     top: 10px;
-    //     right: 30px;
-    // }
+    @include media(tablet){
+        display: none;
+    }
+}
+.consultation2 {
+    display: none;
+    @include media(tablet){
+        z-index: -2;
+        margin: 0;
+        margin-right: 60px;
+        display: inline-block;
+        margin-left: auto;
+    }
 }
 
 
@@ -161,5 +220,13 @@
 
     .header .nav {
         display: flex;
+    }
+}
+
+
+@include media(tablet){
+    .logo svg {
+        width: 22px;
+        height: 30px;
     }
 }

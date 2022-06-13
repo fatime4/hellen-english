@@ -8,6 +8,12 @@
     margin: 0 auto;
 
     // tablet - аналог: @media screen and (min-width: 768px)
+    @include media(mobile){
+        width: 480px;
+        padding: 0 20px;
+    }
+
+    // tablet - аналог: @media screen and (min-width: 768px)
     @include media(tablet){
         width: 768px;
         padding: 0 40px;
