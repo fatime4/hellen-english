@@ -1,4 +1,8 @@
-.container {
+.guarantee {
+  padding-top: 70px;
+}
+
+.guarantee--form {
   padding: 0;
 }
 
@@ -18,18 +22,31 @@
 }
 
 .guarantee__item {
-  display: flex;
+  position: relative;
   font-size: 12px;
   line-height: 1.67;
+  padding-left: 35px;
 
   &:not(:last-child) {
     margin-bottom: 25px;
-    border-left: 1px dashed $primaryTextColor;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 68%;
+      left: 7px;
+      display: block;
+      border-left: 1px dashed $primaryTextColor;
+      height: calc(100% - 5px);
+      width: 1px;
+    }
   }
 
   &::before {
     content: '';
-    flex-shrink: 0;
+    position: absolute;
+    top: 6%;
+    left: 0;
     width: 15px;
     height: 20px;
     margin-right: 20px;
