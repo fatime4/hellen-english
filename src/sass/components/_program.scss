@@ -1,0 +1,73 @@
+// Our program mobile
+
+.program {
+  // background-color: $primaryTitleBackgroundColor;
+  background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
+  padding-top: 50px;
+  // padding-bottom: 70px;
+
+  @include media(mobile-only) {
+    text-align: center;
+  }
+
+  @include media(tablet) {
+    padding-top: 60px;
+    padding-bottom: 137px;
+  }
+}
+
+.program__h2-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: $whiteColor;
+
+  margin-bottom: 30px;
+
+  @include media(tablet) {
+    margin-bottom: 52px;
+  }
+}
+
+.program__h3-title {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.08em;
+  color: $whiteColor;
+
+  margin-bottom: 5px;
+}
+
+.program__h4-title {
+  font-size: 12px;
+  line-height: 1.65;
+  letter-spacing: 0.08em;
+  color: $accentColor;
+
+  margin-bottom: 5px;
+}
+
+.program__h4-title--secondary {
+  margin-bottom: 10px;
+}
+
+.program__list {
+  border-left: 3px solid red;
+  margin-bottom: 40px;
+}
+
+.program__list--secondary {
+  margin-bottom: 8px;
+}
+
+.program__item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+
+// Tablet
