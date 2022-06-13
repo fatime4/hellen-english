@@ -1,11 +1,16 @@
 // Our program mobile
 
+.program__container {
+  @include media(mobile-only) {
+    width: 320px;
+  }
+}
+
 .program {
   padding-top: 50px;
 
   @include media(mobile-only) {
     background-image: linear-gradient(to bottom, #111518 86%, #ffffff 14%);
-    text-align: center;
   }
 
   @include media(tablet) {
@@ -16,6 +21,7 @@
 }
 
 .program__h2-title {
+  text-align: center;
   font-weight: 800;
   font-size: 20px;
   line-height: 1.3;
@@ -34,12 +40,15 @@
   line-height: 2;
   letter-spacing: 0.08em;
   color: $whiteColor;
+  text-transform: uppercase;
 
   margin-bottom: 5px;
 }
 
 .program__h4-title {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+
   font-size: 12px;
   line-height: 1.65;
   letter-spacing: 0.08em;
@@ -49,9 +58,24 @@
 
   &::before {
     content: '';
-    position: absolute;
     width: 15px;
     height: 1px;
+    margin-right: 7px;
+    background-color: $accentColor;
+  }
+}
+
+.program__h3-title--last-semester {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10;
+
+  &::after {
+    content: '';
+    width: 15px;
+    height: 1px;
+    margin: 16px 0;
     background-color: $accentColor;
   }
 }
@@ -60,16 +84,41 @@
   margin-bottom: 10px;
 }
 
-.program__list {
-  border-left: 3px solid red;
+.program__list--main {
+  padding-left: 80px;
+}
 
-  @include media(mobile) {
+.program__list {
+  position: relative;
+
+  @include media(mobile-only) {
     margin-bottom: 40px;
   }
 
   @include media(tablet) {
     margin-bottom: 30px;
   }
+}
+
+.program__list::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: -32px;
+  width: 3px;
+  background-color: $whiteColor;
+}
+
+.program__list::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -32px;
+  transform: translate(-40%);
+  border-radius: 50%;
+
+  background: $accentColor;
 }
 
 .program__list--secondary {

@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page title</title>
-  <link rel="stylesheet" href="./sass/index.scss" />
-</head>
+  <body>
+    <include src="./partials/components/header.html"></include>
 
-<body>
+    <main>
+      <include src="./partials/components/hero.html"></include>
+      <include src="./partials/components/advantages.html"></include>
+      <include src="./partials/components/problems.html"></include>
+      <include src="./partials/components/how-we-do.html"></include>
+      <include src="./partials/components/program.html"></include>
+      <include src="./partials/components/benefits.html"></include>
+      <include src="./partials/components/about.html"></include>
+      <include src="./partials/components/guarantee.html"></include>
+      <include src="./partials/components/reviews.html"></include>
+      <include src="./partials/components/contacts.html"></include>
+    </main>
 
-  <include src="./partials/components/header.html"></include>
+    <include src="./partials/components/footer.html"></include>
 
-  <main>
-    <include src="./partials/components/hero.html"></include>
-    <include src="./partials/components/advantages.html"></include>
-    <include src="./partials/components/problems.html"></include>
-    <include src="./partials/components/how-we-do.html"></include>
-    <include src="./partials/components/program.html"></include>
-    <include src="./partials/components/benefits.html"></include>
-    <include src="./partials/components/about.html"></include>
-    <include src="./partials/components/guarantee.html"></include>
-    <include src="./partials/components/reviews.html"></include>
-    <include src="./partials/components/contacts.html"></include>
-  </main>
-
-  <include src="./partials/components/footer.html"></include>
-
-  <!-- js -->
-  <script src="/src/index.js"></script>
-
-</body>
-
+    <!-- js -->
+    <script src="/src/index.js"></script>
+  </body>
 </html>
