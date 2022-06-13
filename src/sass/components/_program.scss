@@ -1,9 +1,10 @@
 // Our program mobile
 
 .program {
-  background-color: $primaryTitleBackgroundColor;
+  // background-color: $primaryTitleBackgroundColor;
+  background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
   padding-top: 50px;
-  padding-bottom: 70px;
+  // padding-bottom: 70px;
 
   @include media(mobile-only) {
     text-align: center;
