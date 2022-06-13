@@ -10,7 +10,7 @@
 }
 
 .header {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
 }
 
 
@@ -106,8 +106,8 @@
     }
 }
 
-.nav__item:not(:last-child) {
-    margin-right: 64px;
+.nav__item {
+    margin-right: 58px;
 }
 
 .nav__link {
@@ -208,6 +208,12 @@
         margin-right: 60px;
         display: inline-block;
         margin-left: auto;
+    }
+    @include media(desktop){
+        padding: 27px 0;
+        width: 336px;
+        font-size: 14px;
+        margin-right: 0;
     }
 }
 
