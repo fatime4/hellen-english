@@ -1,59 +1,69 @@
 .advantages__list {
-    
-    @include media(tablet){
-        display: flex;
-        justify-content: space-between;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-.dvantages__item {
-    width: 215px;
-    margin: 0 auto;
+.advantages__item {
+  width: 215px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: 0.08em;
+  color: #111518;
+
+//   @include media(mobile-only) {
+//     margin-bottom: 30px;
+//   }
+
+  @include media(desktop) {
+    width: 415px;
+    font-size: 20px;
+  }
+}
+
+.advantages__item:not(:last-child) {
+    @include media(mobile-only) {
+        margin-bottom: 30px;
+      }
+}
+
+.advantages__item::before {
+  content: '';
+
+  flex-shrink: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include media(not-desktop) {
+    margin-right: 9px;
+  }
+
+  @include media(desktop) {
     position: relative;
-    padding-bottom: 30px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.65;
-    letter-spacing: 0.08em;
+    left: 10px;
 
-    color: #111518;
-    display: flex;
-    justify-content: end;
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.dvantages__item::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 60px;
-    height: 60px;
-    left: 0;
-    top: 0;
-    background-color: transparent;
-
-    background-position: center center;
-    background-size: 60px 60px;
-    background-repeat: no-repeat;
-}
-
-.dvantages__item--icon1::before {
-    background-image: url(../images/dvantages/dvantages1.svg);
-
-}
-
-.dvantages__item--icon2::before {
-    background-image: url(../images/dvantages/dvantages2.svg);
-
-}
-
-.dvantages__item--icon3::before {
-    background-image: url(../images/dvantages/dvantages3.svg);
-
-}
-
-.dvantages__item p {
-    width: 146px;
-    display: flex;
-    align-items: center;
-    height: 60px;
+@each $item in student, learning, insurance {
+  .advantages__item--#{$item}::before {
+    background-image: url(../images/advantages/#{$item}.svg);
+  }
 }
