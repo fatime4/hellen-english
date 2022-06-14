@@ -207,6 +207,10 @@
     width: 3px;
     background-color: $whiteColor;
   }
+
+  @include media(tablet-only) {
+    height: calc(100% + 30px);
+  }
 }
 
 .program__list--secondary {
@@ -296,7 +300,7 @@
   }
 
   @include media(desktop) {
-    left: 0;
-    transform: translateY(31%);
+    right: 50%;
+    transform: translate(-25%, 31%);
   }
 }
