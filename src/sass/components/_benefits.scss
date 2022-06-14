@@ -1,7 +1,36 @@
 // Benefits
 
+.container__benefits {
+  @include media(mobile-only) {
+    background-image: linear-gradient(
+      to bottom,
+      $primaryTitleBackgroundColor 67%,
+      $whiteColor 33%
+    );
+  }
+
+  @include media(tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      $primaryTitleBackgroundColor 50%,
+      $whiteColor 50%
+    );
+  }
+}
+
 .benefits {
-  padding: 70px 0px;
+  @include media(mobile-only) {
+    padding: 70px 0px;
+  }
+
+  @include media(tablet-only) {
+    padding-top: 35px;
+    padding-bottom: 70px;
+  }
+
+  @include media(desktop) {
+    padding: 130px 0;
+  }
 }
 
 .benefits__title {
