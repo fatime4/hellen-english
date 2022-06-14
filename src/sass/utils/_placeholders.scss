@@ -1,0 +1,22 @@
+%button {
+    display: block;
+    width: 260px;
+    padding: 14px 0;
+    
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: $whiteColor;
+    background-color: $accentColor;
+    border: 2px solid $accentColor;
+
+      @include media(desktop){
+        font-size: 14px;
+        padding: 27px 0;
+        width: 354px;
+      }
+  }
