@@ -27,10 +27,6 @@
     padding-top: 35px;
     padding-bottom: 70px;
   }
-
-  @include media(desktop) {
-    padding: 130px 0;
-  }
 }
 
 .benefits__title {
@@ -56,6 +52,8 @@
 }
 
 .benefits__secondary-block {
+  position: relative;
+  z-index: 1;
   background: #ffffff;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   text-align: initial;

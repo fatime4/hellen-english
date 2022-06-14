@@ -7,6 +7,7 @@
 }
 
 .program {
+  position: relative;
   padding-top: 50px;
 
   @include media(mobile-only) {
@@ -16,7 +17,7 @@
   @include media(tablet) {
     background-color: $primaryTitleBackgroundColor;
     padding-top: 60px;
-    padding-bottom: 135px;
+    padding-bottom: 130px;
   }
 
   @include media(tablet-only) {
@@ -200,7 +201,8 @@
   @include media(not-desktop) {
     content: '';
     position: absolute;
-    height: calc(100% + 40px);
+    height: calc(100% + 49px);
+    transform: translateY(8px);
     left: 32px;
     width: 3px;
     background-color: $whiteColor;
@@ -274,5 +276,27 @@
   @include media(desktop) {
     font-size: 20px;
     line-height: 1.65;
+  }
+}
+
+// Img
+
+.program__img {
+  position: absolute;
+  width: auto;
+  right: 0;
+  bottom: 0;
+
+  @include media(mobile-only) {
+    transform: translateY(75%);
+  }
+
+  @include media(tablet-only) {
+    bottom: 33px;
+  }
+
+  @include media(desktop) {
+    left: 0;
+    transform: translateY(31%);
   }
 }
