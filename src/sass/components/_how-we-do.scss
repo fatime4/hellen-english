@@ -43,6 +43,11 @@ color: #111518;
 }
 .card__item {
     padding: 30px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     @include media(mobile-only) {
         &:not(:last-child) {
             margin-bottom: 15px;
@@ -54,9 +59,6 @@ color: #111518;
     @include media(desktop) {
         padding: 35px 28px 55px;
     }
-
-    background-color: #ffffff;
-    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
     @include media(tablet) {
         flex-basis: calc((100% - 20px)/2);
@@ -92,6 +94,8 @@ color: #111518;
     @include media(tablet) {
         margin-bottom: 28px;
     }
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card__title {
     position: relative;
@@ -107,6 +111,7 @@ text-align: center;
 letter-spacing: 0.08em;
 
 color: #111518;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 @include media(tablet-only) {
     height: 40px;
 }
@@ -123,6 +128,8 @@ content: '';
 width: 20px;
 height: 2px;
 background: #FF6B09;
+
+transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card__text {
     font-weight: 500;
@@ -133,6 +140,8 @@ text-align: center;
 letter-spacing: 0.08em;
 
 color: #B9B9B9;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 flex-grow: 1;
 @include media(desktop) {
     font-size: 18px;

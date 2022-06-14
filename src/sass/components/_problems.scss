@@ -13,9 +13,10 @@
     background-image: linear-gradient(to bottom, #111518 71%, #ffffff 29%);
   }
   @include media(desktop) {
-    background-image: url(../images/campfire-bg.svg), linear-gradient(to bottom, #111518 79%, #ffffff 21%);
+    background-image: url(../images/campfire-bg.svg),
+      linear-gradient(to bottom, #111518 79%, #ffffff 21%);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: top 88px right 0, center;
   }
 }
 .problems-title {
@@ -92,7 +93,7 @@
     font-size: 20px;
     line-height: 1.65;
     margin-bottom: 10px;
-    }
+  }
 }
 .problem__text {
   font-weight: 700;
@@ -103,9 +104,9 @@
   color: $primaryTitleBackgroundColor;
   @include media(tablet) {
     line-height: 1.43;
-    }
+  }
   @include media(desktop) {
-  font-size: 20px;
-  line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.4;
   }
 }

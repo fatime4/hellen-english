@@ -1,5 +1,9 @@
 .guarantee {
   padding-top: 70px;
+
+  @include media(desktop) {
+    padding-top: 129px;
+  }
 }
 
 .guarantee--form {

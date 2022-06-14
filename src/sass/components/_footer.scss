@@ -1,0 +1,52 @@
+.fake {
+    margin-bottom: 24px;
+    width: 80px;
+    height: 30px;
+    background-color: blueviolet;
+}
+
+
+.footer__contacts {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footer__inst-icon {
+    margin-bottom: 30px;
+    display: block;
+    background-image: url(/src/images/instagram-40.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 40px;
+    height: 40px;
+}
+
+.footer__tell-icon {
+    fill: $accentColor;
+}
+
+.footer__tell {
+    margin-bottom: 28px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+
+
+    letter-spacing: 0.08em;
+
+    color: #111518;
+}
+
+.footer__copiright {
+    padding: 20px 68px;
+
+    background-color: #111518;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+}
