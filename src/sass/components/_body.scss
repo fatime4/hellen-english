@@ -6,3 +6,23 @@ body {
   color: $primaryTextColor;
   background-color: $whiteColor;
 }
+
+body {
+  background-image: url('../images/hero/wave-bg-768.png');
+  background-repeat: no-repeat;
+  background-position: top 265px left;
+  background-size: 100%;
+
+  @include media(tablet) {
+    background-position: top -15px left;
+  }
+}
+
+// Саша, оставляю ниже твой код
+
+// font-family: 'Montserrat', sans-serif;
+// font-style: normal;
+// font-weight: 500;
+// font-size: 18px;
+// color: $primaryTextColor;
+// background-color: $whiteColor;

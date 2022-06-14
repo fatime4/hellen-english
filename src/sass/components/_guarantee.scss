@@ -1,5 +1,11 @@
-.container {
-  padding: 0;
+.guarantee {
+  padding-top: 70px;
+}
+
+.guarantee--form {
+  @include media(mobile-only) {
+    padding: 0;
+  }
 }
 
 .guarantee__title {
@@ -10,26 +16,64 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $primaryTitleBackgroundColor;
+
+  @include media(desktop) {
+    font-size: 46px;
+    margin-bottom: 50px;
+  }
 }
 
 .guarantee__container {
   padding: 45px 20px;
   background-color: $secondaryBackgroundColor;
+
+  @include media(tablet) {
+    max-width: 688px;
+    padding: 30px 64px;
+  }
+
+  @include media(desktop) {
+    max-width: 1314px;
+    padding: 50px 112px 45px 129px;
+  }
 }
 
 .guarantee__item {
-  display: flex;
+  position: relative;
   font-size: 12px;
   line-height: 1.67;
+  padding-left: 35px;
+  color: $primaryTitleBackgroundColor;
+
+  @include media(desktop) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 
   &:not(:last-child) {
     margin-bottom: 25px;
-    border-left: 1px dashed $primaryTextColor;
+
+    @include media(tablet) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 7px;
+      display: block;
+      border-left: 1px dashed $primaryTextColor;
+      height: calc(100% - 12px);
+      width: 1px;
+    }
   }
 
   &::before {
     content: '';
-    flex-shrink: 0;
+    position: absolute;
+    top: 6%;
+    left: 0;
     width: 15px;
     height: 20px;
     margin-right: 20px;
