@@ -4,9 +4,18 @@
 
 .contacts {
     padding: 55px 0;
-    background: rgb(61, 57, 57);
-    // background-image:
-    // url(/src/images/registration/registration-bg-320.jpg);
+    background: #111518;
+
+    background-image:
+        url(/src/images/registration/registration-bg-320.png);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include media(tablet) {
+        padding: 60px 0 68px 0
+    }
 }
 
 .contacts__section,
@@ -21,12 +30,22 @@
 
     font-weight: 800;
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.25;
 
     text-align: center;
     letter-spacing: 0.03em;
 
     color: $whiteColor;
+
+    @include media(tablet) {
+        margin-bottom: 50px;
+
+        font-size: 26px;
+    }
+
+    @include media(desktop) {
+        font-size: 46px;
+    }
 }
 
 .contacts__slogan {
@@ -40,6 +59,12 @@
     letter-spacing: 0.08em;
 
     color: $whiteColor;
+
+    @include media(tablet) {
+        margin-bottom: 56px;
+
+        font-size: 16px;
+    }
 }
 
 
@@ -61,6 +86,12 @@
     letter-spacing: 0.08em;
     outline: transparent;
 
+    @include media(tablet) {
+        margin-bottom: 30px;
+
+        min-width: 390px;
+    }
+
     &::placeholder {
         color: $whiteColor;
     }
@@ -81,6 +112,10 @@
 
     &:last-of-type {
         margin-bottom: 50px;
+
+        @include media(tablet) {
+            margin-bottom: 80px;
+        }
     }
 }
 

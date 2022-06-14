@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page title</title>
-  <link rel="stylesheet" href="./sass/index.scss" />
-</head>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
 
-<body>
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
 
-  <include src="./partials/components/header.html"></include>
+  <body>
+    <include src="./partials/header.html"></include>
 
-  <main>
-    <include src="./partials/components/hero.html"></include>
-    <include src="./partials/components/advantages.html"></include>
-    <include src="./partials/components/problems.html"></include>
-    <include src="./partials/components/how-we-do.html"></include>
-    <include src="./partials/components/program.html"></include>
-    <include src="./partials/components/benefits.html"></include>
-    <include src="./partials/components/about.html"></include>
-    <include src="./partials/components/guarantee.html"></include>
-    <include src="./partials/components/reviews.html"></include>
-    <include src="./partials/components/contacts.html"></include>
-  </main>
+    <main>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/advantages.html"></include>
+      <include src="./partials/problems.html"></include>
+      <include src="./partials/how-we-do.html"></include>
+      <include src="./partials/program.html"></include>
+      <include src="./partials/benefits.html"></include>
+      <include src="./partials/about.html"></include>
+      <include src="./partials/guarantee.html"></include>
+      <include src="./partials/reviews.html"></include>
+      <include src="./partials/contacts.html"></include>
+    </main>
 
-  <include src="./partials/components/footer.html"></include>
+    <include src="./partials/footer.html"></include>
 
-  <!-- js -->
-  <script src="/src/index.js"></script>
-
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- js -->
+    <script src="/src/index.js"></script>
+  </body>
 </html>

@@ -1,94 +1,211 @@
-#more {
-    display: none;
-}
+// #more {
+//   display: none;
+// }
 
 .reviews {
-    padding-bottom: 70px;
-    padding-top: 61px;
+  padding-bottom: 61px;
+  padding-top: 70px;
+
+  @include media(tablet) {
+    padding: 70px 0;
+  }
+  @include media(tablet) {
+    padding: 130px 0;
+  }
 }
 
 .reviews__container {
-    padding: 0 20px;
+  padding: 0 20px;
+
+  @include media(tablet) {
+    display: flex;
+    padding: 40px;
+  }
+  @include media(desktop) {
+    padding: 50px 112px 51px 82px;
+  }
+}
+
+.reviews__group {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include media(tablet) {
+    margin-right: 46px;
+    margin-bottom: 0;
+  }
+
+  @include media(desktop) {
+    margin-right: 40px;
+  }
+}
+
+.reviews__container .reviews__card {
+  @include media(tablet) {
+    display: flex;
+    align-items: center;
+    // margin-right: 46px;
+  }
 }
 
 .title {
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 1.3;
+  margin-bottom: 25px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
 
-    text-align: center;
-    letter-spacing: 0.03em;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    color: $primaryTitleBackgroundColor;
+  color: $primaryTitleBackgroundColor;
+
+  @include media(tablet) {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+  @include media(desktop) {
+    margin-bottom: 50px;
+    font-size: 46px;
+  }
 }
 
 .reviews__text--education {
-margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    font-size: 12px;
-    line-height: 1.25;
+  font-size: 12px;
+  line-height: 1.25;
 
-    text-align: center;
-    letter-spacing: 0.08em;
+  text-align: center;
+  letter-spacing: 0.08em;
+
+  @include media(tablet) {
+    margin-bottom: 20px;
+    text-align: start;
+  }
+  @include media(desktop) {
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 
 .reviews__text--about {
-    font-size: 12px;
-    line-height: 1.67;
+  font-size: 12px;
+  line-height: 1.67;
 
-    text-align: center;
+  text-align: center;
 
-    color: $secondaryTitleColor
-}
+  color: $secondaryTitleColor;
 
-.reviews__card {
-    margin-bottom: 22px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @include media(tablet) {
+    text-align: start;
+  }
+  @include media(desktop) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
 
 .reviews__text-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 52px;
+
+  @include media(tablet) {
+    align-items: flex-start;
+    // min-width: 412px;
+  }
 }
 
 .reviews-title {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 1.2;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
 
-    text-align: center;
-    letter-spacing: 0.08em;
+  text-align: center;
+  letter-spacing: 0.08em;
 
-    color: $accentColor;
+  color: $accentColor;
+
+  @include media(tablet) {
+    font-size: 20px;
+  }
+  @include media(desktop) {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
 }
 
 .reviews__avatar {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 18px;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 18px;
+
+  @include media(tablet) {
+    margin-bottom: 15px;
+
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.reviews__link {
+  width: 30px;
+  height: 30px;
+}
+
+.reviews__nav-block {
+  width: 158px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+
+  @include media(tablet) {
+    width: 558px;
+  }
+}
+
+.reviews__nav {
+  width: 54px;
+  height: 54px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+    @include media(tablet) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .reviews__button {
-    font-weight: 500;
-        font-size: 12px;
-        line-height: 1.67;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
 
-        background-color: $whiteColor;
-        border: none;
-    
-        text-align: center;
-        text-decoration-line: underline;
-    
-        color:$accentColor;
+  background-color: $whiteColor;
+  border: none;
+
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: $accentColor;
+
+  @include media(tablet) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
 
 .social-icon {
-    display: block;
-    fill: #436EAB;
+  display: block;
+  fill: #436eab;
 }
