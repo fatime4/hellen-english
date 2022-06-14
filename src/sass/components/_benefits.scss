@@ -1,0 +1,94 @@
+// Benefits
+
+.benefits {
+  padding: 70px 0px;
+}
+
+.benefits__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  color: $whiteColor;
+
+  margin-bottom: 28px;
+
+  @include media(mobile-only) {
+    width: 180px;
+  }
+
+  @include media(tablet-only) {
+    text-align: center;
+  }
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.benefits__secondary-block {
+  background: #ffffff;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  text-align: initial;
+
+  @include media(mobile-only) {
+    padding: 35px 22px;
+  }
+
+  @include media(tablet) {
+    padding: 40px 98px;
+  }
+
+  @include media(desktop) {
+    padding: 67px 113px;
+  }
+}
+
+.benefits__list {
+  counter-reset: section;
+  list-style-type: none;
+
+  @include media(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: -10px;
+  }
+
+  @include media(desktop) {
+    margin: -20px;
+  }
+
+  .benefits__item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+    color: $primaryTitleBackgroundColor;
+
+    @include media(mobile-only) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include media(tablet) {
+      margin: 10px;
+      width: 236px;
+    }
+
+    @include media(desktop) {
+      margin: 20px;
+      width: 336px;
+    }
+  }
+}
+
+.benefits__item::before {
+  counter-increment: section;
+  content: '— 0' counter(section);
+  color: $accentColor;
+  margin-bottom: 10px;
+  display: block;
+}
