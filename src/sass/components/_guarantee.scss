@@ -16,6 +16,11 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $primaryTitleBackgroundColor;
+
+  @include media(desktop) {
+    font-size: 46px;
+    margin-bottom: 50px;
+  }
 }
 
 .guarantee__container {
@@ -26,6 +31,11 @@
     max-width: 688px;
     padding: 30px 64px;
   }
+
+  @include media(desktop) {
+    max-width: 1314px;
+    padding: 50px 112px 45px 129px;
+  }
 }
 
 .guarantee__item {
@@ -34,6 +44,11 @@
   line-height: 1.67;
   padding-left: 35px;
   color: $primaryTitleBackgroundColor;
+
+  @include media(desktop) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 
   &:not(:last-child) {
     margin-bottom: 25px;
