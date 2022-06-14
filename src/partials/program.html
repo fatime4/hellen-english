@@ -64,7 +64,9 @@
               <li class="program__item">Participle: 1, 2</li>
             </ul>
           </li>
-          <li class="program__box program__box--vocabulary">
+          <li
+            class="program__box program__box--vocabulary program__box--vocabulary-third"
+          >
             <h4 class="program__h4-title">Vocabulary</h4>
             <ul class="program__list--secondary">
               <li class="program__item">Travel & Tourism</li>
@@ -96,7 +98,9 @@
               <li class="program__item">Numeral</li>
             </ul>
           </li>
-          <li class="program__box program__box--vocabulary">
+          <li
+            class="program__box program__box--vocabulary program__box--vocabulary-fourth"
+          >
             <h4 class="program__h4-title">Vocabulary</h4>
             <ul class="program__list--secondary">
               <li class="program__item">Healthy Living</li>
@@ -115,7 +119,7 @@
 
       <!-- 5 semester -->
 
-      <li>
+      <li class="program__list">
         <h3 class="program__h3-title program__h3-title--last-semester">
           5 semester
         </h3>
@@ -125,25 +129,33 @@
         </ul>
       </li>
     </ul>
-
-    <!-- Benefits -->
-
-    <div class="benefits">
-      <h2 class="benefits__title">Why do people choose us</h2>
-      <div class="benefits__secondary-block">
-        <ul class="benefits__list">
-          <li class="benefits__item">Training in small groups</li>
-          <li class="benefits__item">Rendered notes</li>
-          <li class="benefits__item">
-            Each lesson has a goal and a specific result
-          </li>
-          <li class="benefits__item">The real results of the teacher</li>
-          <li class="benefits__item">
-            The course program meets the requirements of the MES of Ukraine
-          </li>
-          <li class="benefits__item">Set of groups by level of knowledge</li>
-        </ul>
-      </div>
-    </div>
+    <picture>
+      <source
+        srcset="
+          ./images/our-program/program-bg-672.png    1x,
+          ./images/our-program/program-bg-672@2x.png 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ./images/our-program/program-bg-374.png    1x,
+          ./images/our-program/program-bg-374@2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/our-program/program-bg-120.png    1x,
+          ./images/our-program/program-bg-120@2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img
+        class="program__img"
+        src="./images/our-program/program-bg-120.png"
+        alt="Процесс обучения"
+      />
+    </picture>
   </div>
 </section>
