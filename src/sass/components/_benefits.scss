@@ -16,11 +16,24 @@
       $primaryTitleBackgroundColor 50%,
       $whiteColor 50%
     );
+
+    @include media(desktop) {
+      background-image: linear-gradient(
+        to bottom,
+        $primaryTitleBackgroundColor 60%,
+        $whiteColor 40%
+      );
+    }
   }
 
   @include media(tablet-only) {
     padding-top: 35px;
     padding-bottom: 35px;
+  }
+
+  @include media(desktop) {
+    padding-top: 130px;
+    padding-bottom: 65px;
   }
 }
 
