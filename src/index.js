@@ -50,8 +50,7 @@ $('.slider-nav').slick({
   ],
 });
 
-// button read more
-
+// button "read more"
 $(document).ready(function () {
   $('.reviews__button').click(function () {
     if ($('.reviews__button').val() == 1) {
