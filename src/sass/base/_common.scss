@@ -40,5 +40,11 @@
 }
 
 .section {
-  padding: 130px 0;
+  padding-top: 65px;
+  padding-bottom: 65px;
+
+  @include media(not-desktop) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
