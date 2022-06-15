@@ -1,4 +1,8 @@
-.about--form {
+.about {
+  background-color: $whiteColor;
+}
+
+.about__container {
   max-width: 1235px;
 }
 
@@ -23,14 +27,17 @@
   }
 }
 
-.about__teacher-name {
+.about__position {
   margin-top: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.08em;
 
   @include media(tablet) {
     margin-top: 0;
   }
+}
+
+.about__teacher-name {
+  line-height: 1.2;
+  letter-spacing: 0.08em;
 
   @include media(desktop) {
     font-size: 30px;
@@ -57,7 +64,7 @@
   }
 }
 
-.about--column {
+.about__column {
   @include media(tablet) {
     display: flex;
   }
@@ -145,7 +152,7 @@
   }
 }
 
-.about__teacher-advantages--paragraph {
+.about__teacher-advantages-paragraph {
   font-size: 12px;
   line-height: 1.67;
   color: $primaryTextColor;

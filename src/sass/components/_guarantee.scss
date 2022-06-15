@@ -1,15 +1,5 @@
 .guarantee {
-  padding-top: 70px;
-
-  @include media(desktop) {
-    padding-top: 129px;
-  }
-}
-
-.guarantee--form {
-  @include media(mobile-only) {
-    padding: 0;
-  }
+  background-color: $whiteColor;
 }
 
 .guarantee__title {
@@ -27,8 +17,9 @@
   }
 }
 
-.guarantee__container {
+.guarantee__list {
   padding: 45px 20px;
+  margin: 0 -20px;
   background-color: $secondaryBackgroundColor;
 
   @include media(tablet) {

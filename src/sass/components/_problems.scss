@@ -1,11 +1,12 @@
 .problems {
-  padding: 0;
   padding-top: 25px;
+  padding-bottom: 35px;
   @include media(tablet) {
     padding-top: 55px;
   }
   @include media(desktop) {
     padding-top: 100px;
+    padding-bottom: 65px;
   }
   background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
   @include media(tablet-only) {

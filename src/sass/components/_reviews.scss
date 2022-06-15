@@ -1,4 +1,5 @@
 .reviews {
+  background-color: $whiteColor;
   padding-bottom: 61px;
   padding-top: 35px;
 
@@ -182,7 +183,7 @@
 
 // navigation-block
 .reviews__nav-block {
-  width: 158px;
+  width: 191px;
   margin-left: auto;
   margin-right: auto;
 
@@ -190,11 +191,12 @@
   justify-content: center;
 
   @include media(tablet) {
-    width: 558px;
+    width: 582px;
   }
 }
 
 .reviews__nav {
+  cursor: pointer;
   &:not(:last-child) {
     margin-right: 10px;
     @include media(tablet) {
@@ -230,6 +232,7 @@
 
 // Slik
 .slick-prev {
+  z-index: 1;
   width: 25px;
   top: 23px;
   left: -62px;
