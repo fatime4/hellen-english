@@ -1,11 +1,5 @@
 .about {
   background-color: $whiteColor;
-
-  &.section {
-    @include media(desktop) {
-      padding-top: 130px;
-    }
-  }
 }
 
 .about__container {
