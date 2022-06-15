@@ -71,7 +71,8 @@
 
 .footer__icon {
   fill: $accentColor;
-  margin-right: 10px;vertical-align: middle;
+  margin-right: 10px;
+  vertical-align: middle;
 
   @include media(tablet) {
     margin-right: 20px;
@@ -90,7 +91,7 @@
     margin-bottom: 28px;
   }
   @include media(tablet-only) {
-   margin-left: auto;
+    margin-left: auto;
   }
   display: block;
   font-weight: 600;
@@ -128,9 +129,9 @@
   }
 }
 .footer__text {
-font-weight: 500;
-font-size: 14px;
-line-height: 2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
 
 color: $primaryTextColor;
 }
@@ -156,3 +157,13 @@ color: $primaryTextColor;
   text-align: center;
 }
 
+.logo-footer {
+  margin-bottom: 22px;
+}
+.scroll-top {
+  opacity: 0;
+
+  &.show {
+    opacity: 1 !important;
+  }
+}
