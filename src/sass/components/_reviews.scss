@@ -30,6 +30,20 @@
   @include media(desktop) {
     padding: 0 85px;
   }
+
+  & .reviews__card {
+    @include media(tablet) {
+      box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+
+      padding: 40px;
+    }
+
+    @include media(desktop) {
+      padding: 50px 112px 50px 82px;
+    }
+  }
 }
 
 .reviews__group {
@@ -45,20 +59,6 @@
 
   @include media(desktop) {
     margin-right: 40px;
-  }
-}
-
-.reviews__container .reviews__card {
-  @include media(tablet) {
-    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-    display: flex;
-    align-items: center;
-
-    padding: 40px;
-  }
-
-  @include media(desktop) {
-    padding: 50px 112px 50px 82px;
   }
 }
 
@@ -156,6 +156,7 @@
   }
 }
 
+// avatar
 .reviews__avatar {
   width: 90px;
   height: 90px;
@@ -169,11 +170,17 @@
   }
 }
 
+// facebook
 .reviews__link {
   width: 34px;
   height: 34px;
 }
+.social-icon {
+  display: block;
+  fill: #436eab;
+}
 
+// navigation-block
 .reviews__nav-block {
   width: 158px;
   margin-left: auto;
@@ -196,6 +203,7 @@
   }
 }
 
+// button
 .reviews__button {
   padding: 0;
   font-weight: 500;
@@ -220,11 +228,7 @@
   }
 }
 
-.social-icon {
-  display: block;
-  fill: #436eab;
-}
-
+// Slik
 .slick-prev {
   width: 25px;
   top: 23px;
@@ -257,12 +261,14 @@
   }
 }
 
+// current border
 .reviews__nav.slick-current {
   outline: 3px solid $accentColor;
   border-radius: 50%;
   outline-offset: -3px;
 }
 
+// button "read more"
 .hide-text {
   display: none;
 }
