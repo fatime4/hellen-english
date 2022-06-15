@@ -7,7 +7,6 @@
   @include media(desktop) {
     padding-top: 100px;
   }
-
   background-image: linear-gradient(to bottom, #111518 79%, #ffffff 21%);
   @include media(tablet-only) {
     background-image: linear-gradient(to bottom, #111518 71%, #ffffff 29%);
@@ -54,7 +53,7 @@
     padding: 67px 113px;
     gap: 30px 40px;
   }
-
+//  обнулити лічильник
   counter-reset: section;
 
   background-color: $whiteColor;
@@ -79,6 +78,7 @@
     margin-bottom: 15px;
   }
 }
+// лічильник
 .problem__text::before {
   counter-increment: section;
   content: '— 0' counter(section);
