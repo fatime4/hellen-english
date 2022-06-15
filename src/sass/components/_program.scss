@@ -12,16 +12,13 @@
 
   @include media(mobile-only) {
     background-color: $primaryTitleBackgroundColor;
+    padding-bottom: 35px;
   }
 
   @include media(tablet) {
     background-color: $primaryTitleBackgroundColor;
     padding-top: 60px;
     padding-bottom: 130px;
-  }
-
-  @include media(tablet-only) {
-    border-bottom: 1px solid $accentColor;
   }
 
   @include media(desktop) {
@@ -121,7 +118,7 @@
   margin-bottom: 10px;
 }
 
-.program__list--main {
+.program__main-list {
   position: relative;
 
   &::before {
@@ -138,7 +135,7 @@
   }
 }
 
-.program__list--main {
+.program__main-list {
   @include media(desktop) {
     display: flex;
     justify-content: space-between;
@@ -213,10 +210,6 @@
   }
 }
 
-.program__list--secondary {
-  margin-bottom: 8px;
-}
-
 .program__item {
   font-weight: 500;
   font-size: 12px;
@@ -244,6 +237,10 @@
   @include media(desktop) {
     width: 226px;
   }
+}
+
+.program__box:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .program__box:nth-child(1) {

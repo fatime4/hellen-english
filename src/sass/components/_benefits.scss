@@ -1,12 +1,13 @@
 // Benefits
 
-.container__benefits {
+.benefits {
   @include media(mobile-only) {
     background-image: linear-gradient(
       to bottom,
       $primaryTitleBackgroundColor 67%,
       $whiteColor 33%
     );
+    padding: 35px 0;
   }
 
   @include media(tablet) {
@@ -16,16 +17,10 @@
       $whiteColor 50%
     );
   }
-}
-
-.benefits {
-  @include media(mobile-only) {
-    padding: 70px 0px;
-  }
 
   @include media(tablet-only) {
     padding-top: 35px;
-    padding-bottom: 70px;
+    padding-bottom: 35px;
   }
 }
 
@@ -56,7 +51,6 @@
   z-index: 1;
   background: #ffffff;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-  text-align: initial;
 
   @include media(mobile-only) {
     padding: 35px 22px;
@@ -86,29 +80,29 @@
   @include media(desktop) {
     margin: -20px;
   }
+}
 
-  .benefits__item {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.43;
-    letter-spacing: 0.08em;
-    color: $primaryTitleBackgroundColor;
+.benefits__item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+  color: $primaryTitleBackgroundColor;
 
-    @include media(mobile-only) {
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
+  @include media(mobile-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
+  }
 
-    @include media(tablet) {
-      margin: 10px;
-      width: 236px;
-    }
+  @include media(tablet) {
+    margin: 10px;
+    width: 236px;
+  }
 
-    @include media(desktop) {
-      margin: 20px;
-      width: 336px;
-    }
+  @include media(desktop) {
+    margin: 20px;
+    width: 336px;
   }
 }
 
