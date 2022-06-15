@@ -12,8 +12,32 @@
   background-position: center;
   background-size: cover;
 
+  @include media(retina) {
+    background-image: url(/src/images/registration/registration-bg-320@2x.png);
+  }
+
+  @include media(tablet) {
+    background-image: url(/src/images/registration/registration-bg-768.png);
+
+    @include media(retina) {
+      background-image: url(/src/images/registration/registration-bg-768@2x.png);
+    }
+  }
+
+  @include media(desktop) {
+    background-image: url(/src/images/registration/registration-bg-1680.png);
+
+    @include media(retina) {
+      background-image: url(/src/images/registration/registration-bg-1680@2x.png);
+    }
+  }
+
   @include media(tablet) {
     padding: 60px 0 68px 0;
+  }
+
+  @include media(desktop) {
+    padding: 100px 0 62px 0;
   }
 }
 
@@ -60,9 +84,13 @@
   color: $whiteColor;
 
   @include media(tablet) {
-    margin-bottom: 56px;
+    margin-bottom: 40px;
 
     font-size: 16px;
+  }
+  @include media(desktop) {
+    margin-bottom: 56px;
+    font-size: 30px;
   }
 }
 
@@ -74,7 +102,7 @@
   color: $whiteColor;
 
   border-color: $whiteColor;
-  padding: 15px 15px 15px 28px;
+  padding: 15px 15px 15px 48px;
   border: 1px solid $whiteColor;
   background-color: transparent;
 
@@ -84,9 +112,16 @@
   outline: transparent;
 
   @include media(tablet) {
-    margin-bottom: 30px;
+    padding: 15px 15px 15px 28px;
 
     min-width: 390px;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 30px;
+    font-size: 20px;
+    min-width: 478px;
+    padding: 23px 23px 23px 40px;
   }
 
   &::placeholder {
@@ -111,22 +146,21 @@
     margin-bottom: 50px;
 
     @include media(tablet) {
+      margin-bottom: 30px;
+    }
+    @include media(desktop) {
       margin-bottom: 80px;
     }
   }
 }
 
-input[type='number'] {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  appearance: textfield;
-}
+.button-contacts {
+  margin: 0;
+  @include media(desktop) {
+    width: 354px;
+    padding: 27px 0;
 
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-  display: none;
-}
-
-.logo-contacts {
-  margin-bottom: 23px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
 }

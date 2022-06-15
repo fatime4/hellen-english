@@ -1,16 +1,21 @@
-// #more {
-//   display: none;
-// }
-
 .reviews {
   padding-bottom: 61px;
-  padding-top: 70px;
+  padding-top: 35px;
+
+  & .container {
+    @include media(tablet) {
+      padding: 0 28px;
+    }
+    @include media(desktop) {
+      width: 1308px;
+    }
+  }
 
   @include media(tablet) {
-    padding: 70px 0;
+    padding: 35px 0 70px;
   }
-  @include media(tablet) {
-    padding: 130px 0;
+  @include media(desktop) {
+    padding: 65px 0;
   }
 }
 
@@ -19,10 +24,11 @@
 
   @include media(tablet) {
     display: flex;
-    padding: 40px;
+    padding: 0 13px;
+    margin-bottom: 40px;
   }
   @include media(desktop) {
-    padding: 50px 112px 51px 82px;
+    padding: 0 85px;
   }
 }
 
@@ -44,9 +50,15 @@
 
 .reviews__container .reviews__card {
   @include media(tablet) {
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
-    // margin-right: 46px;
+
+    padding: 40px;
+  }
+
+  @include media(desktop) {
+    padding: 50px 112px 50px 82px;
   }
 }
 
@@ -88,10 +100,12 @@
     margin-bottom: 18px;
     font-size: 14px;
     line-height: 1.29;
+    max-width: 482px;
   }
 }
 
-.reviews__text--about {
+.reviews__text--about,
+.hide-text {
   font-size: 12px;
   line-height: 1.67;
 
@@ -117,7 +131,7 @@
 
   @include media(tablet) {
     align-items: flex-start;
-    // min-width: 412px;
+    margin: 0;
   }
 }
 
@@ -156,8 +170,8 @@
 }
 
 .reviews__link {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
 }
 
 .reviews__nav-block {
@@ -174,9 +188,6 @@
 }
 
 .reviews__nav {
-  width: 54px;
-  height: 54px;
-
   &:not(:last-child) {
     margin-right: 10px;
     @include media(tablet) {
@@ -200,6 +211,10 @@
   color: $accentColor;
 
   @include media(tablet) {
+    font-size: 12px;
+    line-height: 1.67;
+  }
+  @include media(desktop) {
     font-size: 18px;
     line-height: 1.56;
   }
@@ -208,4 +223,53 @@
 .social-icon {
   display: block;
   fill: #436eab;
+}
+
+.slick-prev {
+  width: 25px;
+  top: 23px;
+  left: -62px;
+
+  @include media(tablet) {
+    top: 50%;
+    left: 0;
+  }
+
+  &::before {
+    content: url(/src/images/feedback/arrow-prev.svg);
+    display: block;
+  }
+}
+
+.slick-next {
+  width: 25px;
+  top: 23px;
+  right: -52px;
+
+  @include media(tablet) {
+    top: 50%;
+    right: 0;
+  }
+
+  &::before {
+    content: url(/src/images/feedback/arrow-next.svg);
+    display: block;
+  }
+}
+
+.reviews__nav.slick-current {
+  outline: 3px solid $accentColor;
+  border-radius: 50%;
+  outline-offset: -3px;
+}
+
+.hide-text {
+  display: none;
+}
+
+.ex {
+  text-align: center;
+  @include media(tablet) {
+    text-align: start;
+  }
 }
