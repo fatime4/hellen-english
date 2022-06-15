@@ -3,8 +3,7 @@
     <a href="./index.html" class="logo" id="logo">
       <p class="logo__name">
         Hell<svg width="14" height="20">
-          <use href="./images/sprite.svg#icon-campfire"></use></svg
-        >EN
+          <use href="./images/sprite.svg#icon-campfire"></use></svg>EN
       </p>
       <p class="logo__text">
         <span class="accent-text">hellish&nbsp;</span>english
@@ -14,16 +13,16 @@
     <nav class="navigation" id="navigation" data-menu>
       <ul class="nav">
         <li class="nav__item">
-          <a class="nav__link" href="#program">Studying program</a>
+          <a class="nav__link" id="program-menu" href="#program">Studying program</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" id="about-menu" href="#about">About</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#training">Training options</a>
+          <a class="nav__link" id="training-menu" href="#training">Training options</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#contacts">Contacts</a>
+          <a class="nav__link" id="contacts-menu" href="#contacts">Contacts</a>
         </li>
       </ul>
       <a href="#xxx" class="consultation" id="consultation"
@@ -93,7 +92,7 @@
   jQuery(document).ready(function () {
     var btn = $('#toTop');
     $(window).scroll(function () {
-      if ($(window).scrollTop() > 300) {
+      if ($(window).scrollTop() > 500) {
         btn.addClass('show');
       } else {
         btn.removeClass('show');
@@ -101,64 +100,35 @@
     });
     btn.on('click', function (e) {
       e.preventDefault();
-      $('html, body').animate({ scrollTop: 0 }, '300');
+      $('html, body').animate({ scrollTop: 0 }, '500');
     });
   });
 
-  // document.getElementById('consultation').onclick = function() {
-  // document.getElementById('navigation').classList.remove('is-open'),
-  // document.getElementById('mabil-menu__btn').classList.remove('is-open'),
-  // document.getElementById('logo').classList.remove('logo-dark');
-  // }
-
-  // document.getElementById('program').onclick = function() {
-  // document.getElementById('navigation').classList.remove('is-open'),
-  // document.getElementById('mabil-menu__btn').classList.remove('is-open'),
-  // document.getElementById('logo').classList.remove('logo-dark');
-  // }
-
-  // document.getElementById('about').onclick = function() {
-  // document.getElementById('navigation').classList.remove('is-open'),
-  // document.getElementById('mabil-menu__btn').classList.remove('is-open'),
-  // document.getElementById('logo').classList.remove('logo-dark');
-  // }
-
-  // document.getElementById('training').onclick = function() {
-  // document.getElementById('navigation').classList.remove('is-open'),
-  // document.getElementById('mabil-menu__btn').classList.remove('is-open'),
-  // document.getElementById('logo').classList.remove('logo-dark');
-  // }
-
-  // document.getElementById('contacts').onclick = function() {
-  // document.getElementById('navigation').classList.remove('is-open'),
-  // document.getElementById('mabil-menu__btn').classList.remove('is-open'),
-  // document.getElementById('logo').classList.remove('logo-dark');
-  // }
   document.getElementById('consultation').onclick = function () {
     document.getElementById('navigation').classList.remove('is-open'),
       document.getElementById('mabil-menu__btn').classList.remove('is-open'),
       document.getElementById('logo').classList.remove('logo-dark');
   };
 
-  document.getElementById('program').onclick = function () {
+  document.getElementById('program-menu').onclick = function () {
     document.getElementById('navigation').classList.remove('is-open'),
       document.getElementById('mabil-menu__btn').classList.remove('is-open'),
       document.getElementById('logo').classList.remove('logo-dark');
   };
 
-  document.getElementById('about').onclick = function () {
+  document.getElementById('about-menu').onclick = function () {
     document.getElementById('navigation').classList.remove('is-open'),
       document.getElementById('mabil-menu__btn').classList.remove('is-open'),
       document.getElementById('logo').classList.remove('logo-dark');
   };
 
-  document.getElementById('training').onclick = function () {
+  document.getElementById('training-menu').onclick = function () {
     document.getElementById('navigation').classList.remove('is-open'),
       document.getElementById('mabil-menu__btn').classList.remove('is-open'),
       document.getElementById('logo').classList.remove('logo-dark');
   };
 
-  document.getElementById('contacts').onclick = function () {
+  document.getElementById('contacts-menu').onclick = function () {
     document.getElementById('navigation').classList.remove('is-open'),
       document.getElementById('mabil-menu__btn').classList.remove('is-open'),
       document.getElementById('logo').classList.remove('logo-dark');
