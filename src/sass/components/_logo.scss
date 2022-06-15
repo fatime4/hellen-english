@@ -1,0 +1,67 @@
+// logo
+
+.logo {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 1.23;
+    letter-spacing: 0.04em;
+    z-index: 1;
+
+    color: #000;
+
+    .logo__name {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo__text {
+        font-weight: 700;
+        font-size: 5px;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+
+        span {
+            color: $accentColor;
+        }
+
+        @include media(tablet){
+            font-size: 8px;
+        }
+
+    
+    }
+
+    @include media(tablet){
+        font-size: 26px;
+    }
+
+    @include media(desktop){
+        margin-right: 165px;
+    }
+}
+
+.logo__name svg {
+    margin: 0 4px;
+    fill: $accentColor;
+}
+
+.logo-dark {
+    color: #fff;
+}
+
+@include media(tablet){
+    .logo svg {
+        width: 22px;
+        height: 30px;
+    }
+}
+
+.logo__name svg {
+    animation: glowing-icon 1300ms infinite;
+}
+
+.logo .logo__text span {
+    animation: glowing-text 1300ms infinite;
+}

@@ -1,11 +1,13 @@
 @import './utils/variables';
 @import './base/reset-styles';
-@import './utils/fonts';
+// @import './utils/fonts';
 @import './utils/mixins';
 @import './utils/placeholders';
+@import './base/animation';
 @import './base/common';
 @import './components/body';
 @import './components/header';
+@import './components/logo';
 @import './components/hero';
 @import './components/advantages';
 @import './components/problems';
@@ -17,4 +19,5 @@
 @import './components/reviews';
 @import './components/contacts';
 @import './components/footer';
+@import './components/button-up';
 
