@@ -12,7 +12,7 @@
 
     color: $whiteColor;
     background-color: $accentColor;
-    border: 2px solid $accentColor;
+    border: none;
 
       @include media(desktop){
         font-size: 14px;
