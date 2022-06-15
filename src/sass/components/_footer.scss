@@ -26,7 +26,6 @@
   @include media(mobile-only) {
     flex-direction: column;
   }
-
 }
 
 .footer__inst-icon {
@@ -46,13 +45,14 @@
 
 .footer__icon {
   fill: $accentColor;
-  margin-right: 10px;vertical-align: middle;
+  margin-right: 10px;
+  vertical-align: middle;
 
   @include media(tablet) {
     margin-right: 20px;
     width: 24px;
     height: 24px;
-   }
+  }
 }
 
 .footer__tell {
@@ -60,9 +60,9 @@
     margin-bottom: 28px;
   }
   @include media(tablet-only) {
-   margin-left: auto;
+    margin-left: auto;
   }
-  
+
   font-weight: 600;
   font-size: 14px;
   line-height: 1.21;
@@ -74,7 +74,7 @@
 
     padding-right: 20px;
     margin-right: 20px;
-    border-right: 1px solid #B9B9B9;
+    border-right: 1px solid #b9b9b9;
   }
   @include media(desktop) {
     font-size: 30px;
@@ -98,14 +98,14 @@
   }
 }
 .footer__text {
-font-weight: 500;
-font-size: 14px;
-line-height: 2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
 
-// display: flex;
-// align-items: center;
+  // display: flex;
+  // align-items: center;
 
-color: $primaryTextColor;
+  color: $primaryTextColor;
 }
 // кнопка вверх
 
@@ -129,3 +129,13 @@ color: $primaryTextColor;
   text-align: center;
 }
 
+.logo-footer {
+  margin-bottom: 22px;
+}
+.scroll-top {
+  opacity: 0;
+
+  &.show {
+    opacity: 1 !important;
+  }
+}
