@@ -236,3 +236,163 @@
         height: 30px;
     }
 }
+
+
+
+@keyframes glowing {
+    0% { background-color: #FF6B09; box-shadow: 0 0 5px #FF6B09; }
+    50% { background-color: #fd7921; box-shadow: 0 0 25px #fd7921; }
+    100% { background-color: #fa8a40; box-shadow: 0 0 5px #fa8a40; }
+}
+
+@keyframes glowing-icon {
+    0% { fill: #FF6B09; }
+    50% { fill: #fd7921; }
+    100% { fill: #66ea3d; }
+}
+
+@keyframes glowing-text {
+    0% { color: #FF6B09; }
+    50% { color: #fd7921; }
+    100% { color: #66ea3d; }
+}
+
+.button,
+#toTop {
+    animation: glowing 1300ms infinite;
+}
+
+
+.program__list::after {
+    animation: glowing 1300ms infinite;
+}
+
+.logo__name svg {
+    animation: glowing-icon 1300ms infinite;
+}
+
+.logo .logo__text span {
+    animation: glowing-text 1300ms infinite;
+}
+
+.accent-text {
+    animation: glowing-text 1300ms infinite;
+}
+
+// hero-img 
+
+@-webkit-keyframes flip-scale-down-ver {
+    0% {
+      -webkit-transform: scale(1) rotateY(0);
+              transform: scale(1) rotateY(0);
+    }
+    50% {
+      -webkit-transform: scale(0.4) rotateY(-90deg);
+              transform: scale(0.4) rotateY(-90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateY(-180deg);
+              transform: scale(1) rotateY(-180deg);
+    }
+  }
+  @keyframes flip-scale-down-ver {
+    0% {
+      -webkit-transform: scale(1) rotateY(0);
+              transform: scale(1) rotateY(0);
+    }
+    50% {
+      -webkit-transform: scale(0.4) rotateY(-90deg);
+              transform: scale(0.4) rotateY(-90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateY(-180deg);
+              transform: scale(1) rotateY(-180deg);
+    }
+  }
+
+  .hero-img:hover {
+	-webkit-animation: flip-scale-down-ver 0.5s linear both;
+	        animation: flip-scale-down-ver 0.5s linear both;
+}
+
+// CONSULTATION BY PHONE
+
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+  }
+  @keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+  }
+
+  .consultation:hover {
+	-webkit-animation: flip-horizontal-bottom 0.4s reverse both;
+	        animation: flip-horizontal-bottom 0.4s reverse both;
+}
+ 
+// menu text 
+
+@-webkit-keyframes flip-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateX(-45deg);
+              transform: scale(2.5) rotateX(-45deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-90deg);
+              transform: scale(1) rotateX(-90deg);
+    }
+  }
+  @keyframes flip-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateX(-45deg);
+              transform: scale(2.5) rotateX(-45deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-90deg);
+              transform: scale(1) rotateX(-90deg);
+    }
+  }
+
+  .nav__item:hover {
+	-webkit-animation: flip-scale-up-hor 0.5s linear ;
+	        animation: flip-scale-up-hor 0.5s linear ;
+}
+
+
+
+// кнопка вверх
+
+#scrollup {
+    position: fixed; /* фиксированная позиция */
+    opacity: 0.8; /* прозрачность */
+    padding: 15px 10px 10px; /* отступы */
+    background: #aaa;
+    border-radius: 5px; /* скругление углов */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    left: 10px; /* отступ слева */
+    bottom: 10px; /* отступ снизу */
+    display: none; /* спрятать блок */
+    cursor: pointer;
+    }
