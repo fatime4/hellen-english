@@ -14,4 +14,17 @@ body {
   @include media(tablet) {
     background-position: top -15px left;
   }
+
+  @include media(desktop) {
+    background-position: top -115px left;
+  }
+
+  @media screen and (min-width: 1800px) {
+    background-position: top -450px left;
+  }
+
+  @media screen and (min-width: 2350px) {
+    background-position: top -722px left;
+  }
+
 }

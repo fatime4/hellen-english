@@ -1,7 +1,7 @@
 @keyframes glowing {
-  0% { background-color: #FF6B09; box-shadow: 0 0 5px #FF6B09; }
-  50% { background-color: #fd7921; box-shadow: 0 0 25px #fd7921; }
-  100% { background-color: #fa8a40; box-shadow: 0 0 5px #fa8a40; }
+  0% { box-shadow: 0 0 5px #FF6B09; }
+  50% { box-shadow: 0 0 25px #fd7921; }
+  100% { box-shadow: 0 0 5px #fa8a40; }
 }
 
 @keyframes glowing-icon {
@@ -105,7 +105,7 @@
     }
   }
 
-  .nav__item:hover {
+  .nav__link:hover {
 	-webkit-animation: flip-scale-up-hor 0.5s linear ;
 	        animation: flip-scale-up-hor 0.5s linear ;
 }
@@ -123,4 +123,34 @@
 
 .accent-text {
     animation: glowing-text 1300ms infinite;
+}
+
+// advent
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+@keyframes wave {
+  0% { transform: translateX(5%); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(0%); }
 }
