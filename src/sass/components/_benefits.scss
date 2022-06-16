@@ -87,11 +87,11 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    margin: -10px;
+    gap: 20px;
   }
 
   @include media(desktop) {
-    margin: -20px;
+    gap: 40px;
   }
 }
 
@@ -109,12 +109,10 @@
   }
 
   @include media(tablet) {
-    margin: 10px;
     width: 236px;
   }
 
   @include media(desktop) {
-    margin: 20px;
     width: 336px;
   }
 }
