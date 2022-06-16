@@ -1,14 +1,14 @@
 .logo-footer {
   @include media(mobile-only) {
     margin-bottom: 22px;
-    width: 80px;
-    height: 30px;
   }
+
   @include media(tablet) {
     width: 128px;
     height: 45px;
+
     @include media(desktop) {
-     margin-right: 290px;
+      margin-right: 290px;
     }
   }
 }
@@ -19,6 +19,7 @@
   padding-top: 24px;
   padding-bottom: 30px;
   text-align: center;
+
   @include media(tablet) {
     padding-top: 50px;
     padding-bottom: 40px;
@@ -29,16 +30,18 @@
   @include media(desktop) {
     padding-top: 52px;
     padding-bottom: 53px;
+    // align-items: stretch;
   }
 }
 
 .footer__inst-icon {
   position: relative;
   display: block;
+
   @include media(mobile-only) {
     margin: 0 auto;
   }
-  
+
   background-image: url(/src/images/instagram-40.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -46,13 +49,14 @@
 
   width: 40px;
   height: 40px;
+
   @include media(tablet) {
     margin-left: 40px;
   }
+
   @include media(desktop) {
     margin-left: 56px;
   }
-
 }
 .footer__inst-icon::before {
   @include media(tablet) {
@@ -64,6 +68,7 @@
     height: 100%;
     background-color: $primaryTextColor;
   }
+
   @include media(desktop) {
     left: -26px;
   }
@@ -78,18 +83,19 @@
     margin-right: 20px;
     width: 24px;
     height: 24px;
-   }
-   @include media(desktop) {
+  }
+  @include media(desktop) {
     margin-right: 30px;
     width: 30px;
     height: 30px;
-   }
+  }
 }
 
 .footer__tell {
   @include media(mobile-only) {
     margin-bottom: 28px;
   }
+
   @include media(tablet-only) {
     margin-left: auto;
   }
@@ -99,23 +105,24 @@
   line-height: 1.21;
   letter-spacing: 0.08em;
   color: $primaryTitleBackgroundColor;
+
   @include media(tablet) {
     font-size: 20px;
     line-height: 1.2;
-
-    // padding-right: 20px;
-    // margin-right: 20px;
-    // border-right: 1px solid #B9B9B9;
   }
   @include media(desktop) {
     font-size: 30px;
     line-height: 1.23;
   }
 }
+
+// copyright
+
 .footer__copyright {
   @include media(mobile-only) {
     padding: 20px 68px;
   }
+
   @include media(tablet) {
     padding: 20px 0;
   }
@@ -124,6 +131,7 @@
   font-size: 14px;
   line-height: 2;
   text-align: center;
+
   @include media(tablet) {
     text-align: left;
   }
@@ -132,10 +140,5 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 2;
-
-color: $primaryTextColor;
-}
-
-.logo-footer {
-  margin-bottom: 22px;
+  color: $primaryTextColor;
 }
