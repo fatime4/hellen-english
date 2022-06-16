@@ -120,7 +120,7 @@
 
 .footer__copyright {
   @include media(mobile-only) {
-    padding: 20px 68px;
+    padding: 20px 0;
   }
 
   @include media(tablet) {
