@@ -1,23 +1,21 @@
 .header {
     padding: 30px 0 0 0;
-}
 
-.header .container {
-    position: relative;
-    z-index: 1;
-
-    @include media(tablet){
-        display: flex;
-        justify-content: start;
-        align-items: baseline;
+    & .container {
+        position: relative;
+        z-index: 1;
+    
+        @include media(tablet){
+            display: flex;
+            justify-content: start;
+            align-items: baseline;
+        }
     }
 }
 
 // navigation
 
-
-
-.navigation {
+.nav {
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -41,7 +39,7 @@
     }
 }
 
-.nav {
+.nav__list {
     padding: 0 20px;
     @include media(mobile){
         width: 480px;
@@ -84,33 +82,38 @@
 
 
 // menu button 
-.mabil-menu__btn {
+.mobil-menu__btn {
     position: absolute;
-    top: 0;
-    right: 20px;
+    top: -3px;
+    right: 8px;
     cursor: pointer;
     border: none;
     background: transparent;
     z-index: 2;
+
+    @include media(tablet) {
+        top: 4px;
+        right: 27px;
+    }
 
     @include media(desktop) {
         display: none;
     }
 }
 
-.mabil-menu__btn .icon-menu-close {
+.mobil-menu__btn .icon-menu-close {
     display: none;
 }
 
-.mabil-menu__btn.is-open .icon-menu-close {
+.mobil-menu__btn.is-open .icon-menu-close {
     display: block;
 }
 
-.mabil-menu__btn.is-open .icon-menu-open {
+.mobil-menu__btn.is-open .icon-menu-open {
     display: block;
 }
 
-.navigation.is-open {
+.nav.is-open {
     display: block;
 }
 
@@ -118,7 +121,9 @@
     fill: #fff;
 }
 
-.consultation {
+// consultation button
+
+.consult-btn {
     display: block;
     width: 260px;
     padding: 14px 0;
@@ -141,7 +146,7 @@
         display: none;
     }
 }
-.consultation2 {
+.consult-btn--menu {
     display: none;
     @include media(tablet){
         z-index: -2;
@@ -165,24 +170,7 @@
         justify-content: space-between;
     }
 
-    .header .nav {
+    .header .nav__list {
         display: flex;
     }
 }
-
-
-.button,
-#toTop {
-    animation: glowing 1300ms infinite;
-}
-
-
-.program__list::after {
-    animation: glowing 1300ms infinite;
-}
-
-
-.accent-text {
-    animation: glowing-text 1300ms infinite;
-}
-

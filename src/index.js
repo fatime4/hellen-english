@@ -70,7 +70,7 @@ $(document).ready(function () {
 
 // logo style
 
-document.getElementById('mabil-menu__btn').onclick = function () {
+document.getElementById('mobil-menu__btn').onclick = function () {
   document.getElementById('logo').classList.toggle('logo-dark');
 };
 
@@ -110,32 +110,26 @@ $(document).ready(function () {
 
 // mobil-menu при клике на секцию переход и закрываться меню
 
-document.getElementById('consultation').onclick = function () {
-  document.getElementById('navigation').classList.remove('is-open'),
-    document.getElementById('mabil-menu__btn').classList.remove('is-open'),
-    document.getElementById('logo').classList.remove('logo-dark');
-};
-
 document.getElementById('program-menu').onclick = function () {
   document.getElementById('navigation').classList.remove('is-open'),
-    document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+    document.getElementById('mobil-menu__btn').classList.remove('is-open'),
     document.getElementById('logo').classList.remove('logo-dark');
 };
 
 document.getElementById('about-menu').onclick = function () {
   document.getElementById('navigation').classList.remove('is-open'),
-    document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+    document.getElementById('mobil-menu__btn').classList.remove('is-open'),
     document.getElementById('logo').classList.remove('logo-dark');
 };
 
 document.getElementById('training-menu').onclick = function () {
   document.getElementById('navigation').classList.remove('is-open'),
-    document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+    document.getElementById('mobil-menu__btn').classList.remove('is-open'),
     document.getElementById('logo').classList.remove('logo-dark');
 };
 
 document.getElementById('contacts-menu').onclick = function () {
   document.getElementById('navigation').classList.remove('is-open'),
-    document.getElementById('mabil-menu__btn').classList.remove('is-open'),
+    document.getElementById('mobil-menu__btn').classList.remove('is-open'),
     document.getElementById('logo').classList.remove('logo-dark');
 };
