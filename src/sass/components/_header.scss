@@ -61,6 +61,11 @@
 
 .nav__item {
   margin-right: 58px;
+
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.3);
+  }
 }
 
 .nav__link {
