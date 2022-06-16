@@ -1,20 +1,44 @@
-.fake {
-  margin-bottom: 24px;
-  width: 80px;
-  height: 30px;
-  background-color: blueviolet;
+.logo-footer {
+  @include media(mobile-only) {
+    margin-bottom: 22px;
+    width: 80px;
+    height: 30px;
+  }
+  @include media(tablet) {
+    width: 128px;
+    height: 45px;
+    @include media(desktop) {
+     margin-right: 290px;
+    }
+  }
 }
-
+.footer {
+  padding: 0;
+}
 .footer__contacts {
   padding-top: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-bottom: 30px;
+  text-align: center;
+  @include media(tablet) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+  }
+  @include media(desktop) {
+    padding-top: 52px;
+    padding-bottom: 53px;
+  }
 }
 
 .footer__inst-icon {
-  margin-bottom: 30px;
+  position: relative;
   display: block;
+  @include media(mobile-only) {
+    margin: 0 auto;
+  }
+  
   background-image: url(/src/images/instagram-40.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -22,53 +46,94 @@
 
   width: 40px;
   height: 40px;
+  @include media(tablet) {
+    margin-left: 40px;
+  }
+  @include media(desktop) {
+    margin-left: 56px;
+  }
+
+}
+.footer__inst-icon::before {
+  @include media(tablet) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 1px;
+    height: 100%;
+    background-color: $primaryTextColor;
+  }
+  @include media(desktop) {
+    left: -26px;
+  }
 }
 
-.footer__tell-icon {
+.footer__icon {
   fill: $accentColor;
   margin-right: 10px;
+  vertical-align: middle;
+
+  @include media(tablet) {
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+   }
+   @include media(desktop) {
+    margin-right: 30px;
+    width: 30px;
+    height: 30px;
+   }
 }
 
 .footer__tell {
-  margin-bottom: 28px;
+  @include media(mobile-only) {
+    margin-bottom: 28px;
+  }
+  @include media(tablet-only) {
+    margin-left: auto;
+  }
+  display: block;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.21;
-
   letter-spacing: 0.08em;
+  color: $primaryTitleBackgroundColor;
+  @include media(tablet) {
+    font-size: 20px;
+    line-height: 1.2;
 
-  color: #111518;
+    // padding-right: 20px;
+    // margin-right: 20px;
+    // border-right: 1px solid #B9B9B9;
+  }
+  @include media(desktop) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }
+.footer__copyright {
+  @include media(mobile-only) {
+    padding: 20px 68px;
+  }
+  @include media(tablet) {
+    padding: 20px 0;
+  }
 
-.footer__copiright {
-  padding: 20px 68px;
-
-  background-color: #111518;
+  background-color: $primaryTitleBackgroundColor;
   font-size: 14px;
   line-height: 2;
   text-align: center;
+  @include media(tablet) {
+    text-align: left;
+  }
 }
-
-// кнопка вверх
-
-#toTop {
-  width: 60px;
-  height: 60px;
-  font-weight: 700;
-  background: $accentColor;
-  color: #fff;
-  border-radius: 50px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111518;
+.footer__text {
+  font-weight: 500;
   font-size: 14px;
   line-height: 2;
-  text-align: center;
+
+color: $primaryTextColor;
 }
 
 .logo-footer {
