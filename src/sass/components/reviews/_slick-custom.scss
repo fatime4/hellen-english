@@ -1,0 +1,75 @@
+.reviews__list .slick-slide {
+  @include media(tablet) {
+    padding: 26px;
+  }
+}
+
+.slick-slide .reviews__pic {
+  max-width: 100%;
+  width: 54px;
+  height: 54px;
+  margin: 5px;
+  transition: outline-color 400ms ease-in-out;
+
+  @include media(tablet) {
+    margin: 15px;
+  }
+}
+
+// Slik
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+
+  bottom: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.slick-prev {
+  left: -48px;
+
+  @include media(tablet) {
+    left: -20px;
+  }
+
+  @include media(desktop) {
+    left: 20px;
+  }
+
+  &::before {
+    background-image: url(../images/feedback/arrow-prev.svg);
+  }
+}
+
+.slick-next {
+  right: -48px;
+
+  @include media(tablet) {
+    right: -20px;
+  }
+  @include media(desktop) {
+    right: 20px;
+  }
+
+  &::before {
+    background-image: url(../images/feedback/arrow-next.svg);
+  }
+}
+
+// current border
+.reviews__pagination .slick-slide.slick-current img {
+  outline: 2px solid $accentColor;
+  outline-offset: -2px;
+  border-radius: 50%;
+}
