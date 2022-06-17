@@ -1,0 +1,57 @@
+// logo
+
+.logo {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 1.23;
+    letter-spacing: 0.04em;
+    z-index: 1;
+
+    color: #000;
+
+    @include media(tablet){
+        font-size: 26px;
+    }
+
+    @include media(desktop){
+        margin-right: 165px;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 5px;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+
+        @include media(tablet){
+            font-size: 8px;
+        }
+    }
+}
+
+.logo__icon {
+    margin: 0 4px;
+    fill: $accentColor;
+    animation: glowing-icon 1300ms infinite;
+
+    @include media(tablet){
+        width: 22px;
+        height: 30px;
+
+    }
+}
+
+.logo-dark {
+    color: #fff;
+}
+
+.logo__text .accent-text {
+    animation: glowing-text 1300ms infinite;
+}

@@ -1,0 +1,30 @@
+body {
+  font-family: $commonFontFamily, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: $primaryTextColor;
+  background-color: $whiteColor;
+
+  background-image: url('../images/hero/wave-bg-768.png');
+  background-repeat: no-repeat;
+  background-position: top 265px left;
+  background-size: 100%;
+
+  @include media(tablet) {
+    background-position: top -15px left;
+  }
+
+  @include media(desktop) {
+    background-position: top -115px left;
+  }
+
+  @media screen and (min-width: 1800px) {
+    background-position: top -450px left;
+  }
+
+  @media screen and (min-width: 2350px) {
+    background-position: top -722px left;
+  }
+
+}

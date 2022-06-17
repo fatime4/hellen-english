@@ -1,0 +1,126 @@
+// Benefits
+
+.benefits {
+  @include media(mobile-only) {
+    background-image: linear-gradient(
+      to bottom,
+      $primaryTitleBackgroundColor 67%,
+      $whiteColor 33%
+    );
+    padding: 35px 0;
+  }
+
+  @include media(tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      $primaryTitleBackgroundColor 50%,
+      $whiteColor 50%
+    );
+
+    @include media(desktop) {
+      background-image: linear-gradient(
+        to bottom,
+        $primaryTitleBackgroundColor 60%,
+        $whiteColor 40%
+      );
+    }
+  }
+
+  @include media(tablet-only) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include media(desktop) {
+    padding-top: 130px;
+    padding-bottom: 65px;
+  }
+}
+
+.benefits__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  color: $whiteColor;
+
+  margin-bottom: 28px;
+
+  @include media(mobile-only) {
+    width: 180px;
+  }
+
+  @include media(tablet-only) {
+    text-align: center;
+  }
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.benefits__secondary-block {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  @include media(mobile-only) {
+    padding: 35px 22px;
+  }
+
+  @include media(tablet) {
+    padding: 40px 98px;
+  }
+
+  @include media(desktop) {
+    padding: 67px 113px;
+  }
+}
+
+.benefits__list {
+  counter-reset: section;
+  list-style-type: none;
+
+  @include media(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  @include media(desktop) {
+    gap: 40px;
+  }
+}
+
+.benefits__item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+  color: $primaryTitleBackgroundColor;
+
+  @include media(mobile-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(tablet) {
+    width: 236px;
+  }
+
+  @include media(desktop) {
+    width: 336px;
+  }
+}
+
+.benefits__item::before {
+  counter-increment: section;
+  content: '— 0' counter(section);
+  color: $accentColor;
+  margin-bottom: 10px;
+  display: block;
+}
